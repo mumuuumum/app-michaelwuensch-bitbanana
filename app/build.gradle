@@ -43,12 +43,14 @@ android {
         includeInApk = false
         includeInBundle = false
     }
-    compileOptions { 
-        sourceCompatibility(JavaVersion.VERSION_17)
-        targetCompatibility(JavaVersion.VERSION_17)
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
-    kotlinOptions { 
-        jvmTarget = '17'
+
+    // 如果你使用 Kotlin，也请确保 kotlinOptions 使用 JVM 8
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
     testOptions { 
         unitTests.returnDefaultValues = true
